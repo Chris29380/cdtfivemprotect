@@ -12,9 +12,11 @@
     </div>
     <div class="footer" id="footer">
         <?php
-
-            foreach (getallheaders() as $name => $value) {
-                echo "$name: $value\n";
+            function get_client_ip() {
+                return $_SERVER['HTTP_X_FORWARDED_FOR']
+                ?? $_SERVER['REMOTE_ADDR']
+                ?? $_SERVER['HTTP_CLIENT_IP']
+                ?? '';
             }
             
         ?>
