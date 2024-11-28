@@ -1,3 +1,25 @@
+<?php
+    $url = parse_url($_SERVER['REQUEST_URI']);
+
+    $path = isset($url['path']) ? $url['path'] : '/';
+    $parts = explode("&", $url['query']);
+    print_r ($parts[0]);
+
+    if ($parts[0] != '') {
+        $loc = explode("=", $parts[0]);
+        $act = explode("=", $parts[1]);
+        if ($loc[1]="panel") {
+            if ($act[1]="login") {
+                header('Location: /panel/login');
+            } else {
+                if ($act[1]="logout") {
+                    header('Location: /panel/logout');
+                }
+            }
+        }
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,12 +31,6 @@
 <body>
     <div class="content" id="content">
         <img src="/img/logo_fivemprotect.png"/>
-    </div>
-    <div class="footer" id="footer">
-        <?php
-            $ip = $_SERVER['HTTP_CLIENT_IP'];
-            echo "<div id='infocli' class='infocli'>Your IP <span style='color:black'>$ip</span></div>";
-        ?>
     </div>
 </body>
 </html>
