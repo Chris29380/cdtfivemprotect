@@ -10,5 +10,13 @@
     <div class="content" id="content">
         <img src="/img/logo_fivemprotect.png"/>
     </div>
+    <div class="footer" id="footer">
+        <?php
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+            echo "<div class='infosclient' id='infosclient'>
+                Your Ip $ip
+            </div>";
+        ?>
+    </div>
 </body>
 </html>
