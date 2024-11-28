@@ -18,7 +18,13 @@
                 ?? $_SERVER['HTTP_CLIENT_IP']
                 ?? '';
             }
-            
+            $uagent = $_SERVER['HTTP_USER_AGENT'];
+            echo "<div class='ipcli' id='ipcli'> Your IP <span style='color:black'>".
+                get_client_ip().
+            "</span></div>";
+            echo "<div class='useragent' id='useragent'> User-Agent <span style='color:black'>".
+                $uagent.
+            "</span></div>";
         ?>
     </div>
 </body>
