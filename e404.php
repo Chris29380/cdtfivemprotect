@@ -10,7 +10,7 @@
     <div class="content" id="content">
         <img src="/img/logo_fivemprotect.png"/>
         <div class="text" id="text">
-            403 - ACCES DENIED    
+            404 - EMPTY ACCESS    
         </div>
     </div>
     <div class="footer" id="footer">

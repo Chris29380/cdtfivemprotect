@@ -40,6 +40,22 @@ body .content img{
     opacity: 0.2;
 }
 
+body .content .text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-family: myfont;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgba(255, 0, 0, 0.8);
+    width: 80%;
+    height: 20%;
+    background-color: rgba(255, 0, 0, 0.02);
+    border-radius: 21px 0 21px 0;
+}
+
 body .footer {
     display: flex;
     position: absolute;
@@ -48,7 +64,7 @@ body .footer {
     font-family: myfont;
     color: white;
     font-size: 14px;
-    background-color: rgba(255, 69, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.5);
     width: 60%;
     height: 5%;
     margin-top: 36%;
