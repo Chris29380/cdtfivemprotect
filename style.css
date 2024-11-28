@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'myfont';
+    src : url('/font/Amble-Regular.ttf')  format('truetype'), 
+}
+
+body {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(34, 34, 34);
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------------------------- */
+/* accueil */
+/* -------------------------------------------- */
+
+body .content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(44, 44, 44, 0.2);
+    border-radius: 20px;
+    width: 60%;
+    height: 70%;
+}
+
+body .content:hover {
+    background-color: rgba(44, 44, 44, 0.5);
+    width: 60%;
+    height: 70%;
+}
+
+body .content img{
+    width: 45%;
+    opacity: 0.2;
+}
