@@ -82,7 +82,6 @@
 </head>
 <body>
     <div class="content" id="content">
-        <img src="/img/logo_fivemprotect.png"/>
         <div class="text" id="text">
             403 - ACCES DENIED    
         </div>
