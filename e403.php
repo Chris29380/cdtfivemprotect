@@ -12,10 +12,11 @@
     </div>
     <div class="footer" id="footer">
         <?php
-            $ip = $_SERVER['HTTP_CLIENT_IP'];
-            echo "<div class='infosclient' id='infosclient'>
-                Your Ip $ip
-            </div>";
+
+            foreach (getallheaders() as $name => $value) {
+                echo "$name: $value\n";
+            }
+            
         ?>
     </div>
 </body>
