@@ -10,5 +10,22 @@
     <div class="content" id="content">
         <img src="/img/logo_fivemprotect.png"/>
     </div>
+    <div class="footer" id="footer">
+        <?php
+            function get_client_ip() {
+                return $_SERVER['HTTP_X_FORWARDED_FOR']
+                ?? $_SERVER['REMOTE_ADDR']
+                ?? $_SERVER['HTTP_CLIENT_IP']
+                ?? '';
+            }
+            $uagent = $_SERVER['HTTP_USER_AGENT'];
+            echo "<div class='ipcli' id='ipcli'> Your IP <span style='color:black'>".
+                get_client_ip().
+            "</span></div>";
+            echo "<div class='useragent' id='useragent'> User-Agent <span style='color:black'>".
+                $uagent.
+            "</span></div>";
+        ?>
+    </div>
 </body>
 </html>
