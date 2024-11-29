@@ -25,6 +25,11 @@
             echo "<div class='useragent' id='useragent'> User-Agent <span style='color:black'>".
                 $uagent.
             "</span></div>";
+
+            
+foreach (getallheaders() as $name => $value) {
+    echo "$name: $value\n";
+}
         ?>
     </div>
 </body>
